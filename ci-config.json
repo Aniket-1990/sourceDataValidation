@@ -1,0 +1,6 @@
+{
+    "execute": {
+      "Run": "cd /home/user/data/ && python main.py"
+    },
+    "default_file": "main.py"
+}
