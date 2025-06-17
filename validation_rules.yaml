@@ -1,0 +1,34 @@
+# Define schema and validation rules for each column
+columns:
+  - name: id
+    type: integer
+    required: true
+    constraints:
+      min: 1
+
+  - name: name
+    type: string
+    required: true
+    constraints:
+      regex: "^[A-Za-z ]+$"
+
+  - name: age
+    type: integer
+    required: false
+    constraints:
+      min: 18
+      max: 100
+
+  - name: email
+    type: string
+    required: false
+    constraints:
+      regex: "^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$"
+
+  - name: signup_date
+    type: date
+    required: true
+    constraints:
+      format: "%Y-%m-%d"
+
+# Add more columns as needed
